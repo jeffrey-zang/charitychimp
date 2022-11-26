@@ -27,10 +27,16 @@ app.post(`/api/profile`, (req, res) => __awaiter(void 0, void 0, void 0, functio
     const pkey = req.body.pkey;
     if (!pkey)
         res.status(400).json({ message: "include pee key" });
-    const profile = yield deso.getSingleProfile({
-        publicKey: pkey,
-    });
-    console.log("AAAAAAAAAAAAA");
+    let profile = '';
+    try {
+        profile = yield deso.getSingleProfile({
+            publicKey: pkey,
+        });
+    }
+    catch (err) {
+        return res.status(500).json({ message: err });
+    }
+    console.log("AAAAAAAAAAAAA", profile);
     res.status(200).json(profile);
 }));
 app.listen(5000, () => {

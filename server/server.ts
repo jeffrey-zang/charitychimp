@@ -22,10 +22,15 @@ app.post(`/api/profile`, async (req: express.Request<{}, {}, ReqBody>, res: expr
   const pkey = req.body.pkey as string;
   if (!pkey) res.status(400).json({message: "include pee key"});
 
-  const profile = await deso.getSingleProfile({
-    publicKey: pkey,
-  });
-  console.log("AAAAAAAAAAAAA")
+  let profile='';
+  try {
+      profile = await deso.getSingleProfile({
+      publicKey: pkey,
+    });
+  } catch (err) {
+    return res.status(500).json({message: err})
+  }
+  console.log("AAAAAAAAAAAAA", profile)
 
   res.status(200).json(profile);
 })

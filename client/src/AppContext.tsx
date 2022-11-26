@@ -2,9 +2,9 @@ import React from "react";
 
 interface Charity {
     name: string,
-    description: string,
-    helps: string,
-    documents: URL,
+    tagline: string,
+    goal: number,
+    thumbnailUrl: string,
 }
 
 interface User {

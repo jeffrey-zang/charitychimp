@@ -1,18 +1,69 @@
-input{
-    height: 1rem;
-    justify-content: right;
-}
+@use "../../utils/utils.scss" as *;
 
 #searchBtn {
     height: 100%;
 }
 
-#posts {
-    border-color: #8BACB1;
-    border: 3px;
-    height: 6rem;
-    width: 3rem;
-    h1 {
-        font-size: 30px;
+#browse {
+    #searchbar {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 2rem;
+        margin-top: 3rem;
+        gap: 1rem;
+
+        input {
+            width: 100%;
+            font-size: 1.25rem;
+            border: none;
+            background-color: #eee;
+            padding-left: 1rem;
+            border-radius: 10px;
+        }
     }
 }
+
+#posts {
+    border: 5px #8BACB1 solid;
+    border-radius: 10px;
+    height: 14rem;
+    box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
+    width: 24%;
+    margin: 2rem;
+    margin-top: 1rem;
+    background: white;
+    text-align: left;
+
+    h1 {
+        font-size: 30px;
+        font-weight:normal;
+        margin: 1rem;
+        color: #8BACB1;
+    }
+    h2 {
+        font-size: 20px;
+        font-weight:normal;
+        margin: 1rem;
+        color: black;
+    }
+}
+
+.progress{
+    color: #8BACB1;
+    background: lightgrey;
+    height: 1rem;
+    margin: 1rem;
+    display: flex;
+
+    div {
+        background-color: #8BACB1;
+    }
+}
+
+.progress-labels {
+    display: flex;
+    color: #8BACB1;
+    margin: 1rem;
+    justify-content: space-between;
+}
+

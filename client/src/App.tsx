@@ -7,6 +7,7 @@ import Browse from './pages/Browse/Browse'
 import Post from './pages/Post/Post'
 import Search from './pages/Search/Search'
 import Login from './pages/Login/Login'
+import Success from './pages/Login/Success'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/post" element={<Post/>}/>
         <Route path='/search' element={<Search/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/success' element={<Success/>}/>
       </Routes>
       </BrowserRouter>
     </AppContextProvider>
