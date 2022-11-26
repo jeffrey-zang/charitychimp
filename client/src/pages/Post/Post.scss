@@ -1,6 +1,6 @@
 @use "../../utils/utils.scss" as *;
 
-#Post {
+#Post, #postsuccess {
     margin: 5% 20%;
     box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
     padding: 3rem;
@@ -11,16 +11,16 @@
     h1 {
         margin-top: 0;
         text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 2rem;
     }
 
     form {
         display: block;
 
-        label, input {
-            display: flex;
-            flex-direction: column;
-        }
-        input, textarea {
+        input:not([type="checkbox"]), textarea {
             padding: 0.5rem;
             border-radius: 5px;
             font-size: 1.25rem;
@@ -32,19 +32,46 @@
             font-family: 'Inter', sans-serif;
             resize: none;
         }
+
+        #tags-label {
+            display: block;
+            margin-top: 1rem;
+        }
     }
 
+    
     button[type="submit"] {
         margin-top: 0.5rem;
     }
 }
 
+input[type="checkbox"] {
+    position: relative;
+    top: -1px;
+    vertical-align: middle;
+    margin-left: 1rem;
+}
+
+/* The styles below are used to style the tag component from react-input-tag-component. 
+Apparently the only way to override the styles is use !important, so don't blame me for using it */
 .rti--container {
     --rti-tag: #eeeeee !important;
+    --rti-s: 0 !important;
+    --rti-main: #FFFFFF !important;
     margin-top: 0.5rem !important;
+    width: 100%;
+    border: 0 !important;
 
+    &:hover {
+        outline: 0;
+    }
 }
+
+.rti--tag {
+    margin: 0 0.25rem 0.25rem 0 !important;
+}
+
 .rti--tag button {
-    margin: 0;
+    margin: 0 0.25rem;
     color: black;
 }

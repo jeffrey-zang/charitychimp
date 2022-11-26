@@ -11,8 +11,10 @@ const Success = () => {
   if (context.user) {
     return (
       <div id='success'>
-        <h2><FaCheck/> Successfully logged into your Deso account</h2>
-        <p>Success! You're now logged in and can create posts about your SADFASDFKASDJF;KADJS;KJ;LKDJSAfavourite charities.</p>
+        <h2>Successfully logged into your Deso account <FaCheck/> </h2>
+        <p>Success! You're now logged in and can create posts about your favourite charities.</p>
+        <h2>Your Deso Profile</h2>
+        <img src={context.user?.pfp} alt='successimg'></img>
         <p>
           Username: <code>{context.user?.username}</code><br/>
           Description: <code>{context.user?.description}</code><br/>
@@ -20,6 +22,7 @@ const Success = () => {
         </p>
         <Link to='/post' key='post'>Start posting</Link><br/>
         <Link to='/browse' key='browse'>Browse charities</Link>
+        <h2 style={{marginTop: '2rem'}}>Your posts</h2>
       </div>
     )  
   } else {

@@ -28,7 +28,7 @@ const Navbar = () => {
           })}
       </div>
       <img className={context.user?.pfp ? "navpfp" : "hide"} src={context.user?.pfp} alt='pfp'></img>
-      <Link key='Login' to={`/${context.user ? "success" : "login"}`} id='loginbutton'>
+      <Link key='Login' to={`/${context.user ? "profile" : "login"}`} id='loginbutton'>
         {amiloggedin}
       </Link>
       {/* <a href='https://github.com/jeffrey-zang/give-back-hacks' target='_blank' rel='noreferrer'><BsGithub/></a> */}

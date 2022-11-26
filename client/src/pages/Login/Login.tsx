@@ -49,13 +49,13 @@ const Login = () => {
         }}
       >
         <h2>
-          Log in using your Deso public id
+          Log In using your Deso Public ID
           <a href='https://diamondapp.com/'>
             <img src={Desologo} alt='desologo' id='desologo'></img>
           </a>
         </h2><br />
         <p id='desc'>Example: BC1YLgk64us61PUyJ7iTEkV4y2GqpHSi8ejWJRnZwsX6XRTZSfUKsop</p>
-        <input className='form' type="text" id="id" name="id" placeholder='your id' value={id} onChange={(e) => setId(e.target.value)} required></input><br />
+        <input className='form' type="text" id="id" name="id" placeholder='Deso Public ID' value={id} onChange={(e) => setId(e.target.value)} required></input><br />
         <button id='submitbutton' type="submit" value="Submit">Log In</button>
       </form>
       <p>
