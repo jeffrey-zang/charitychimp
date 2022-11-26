@@ -6,7 +6,11 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-button{
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+button, #submitbutton {
 	color: white;
     background: #8BACB1;
     border: 20px;

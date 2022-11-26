@@ -36,7 +36,7 @@ export const AppContextProvider: React.FC<{children: React.ReactNode|React.React
         setCharities([...charities, charity])
     }
 
-    const [user, setUser] = React.useState<User>({})
+    const [user, setUser] = React.useState<User>()
 
     return (
         <AppContext.Provider value={{charities, setCharities, addCharity, user, setUser}}>{children}</AppContext.Provider>

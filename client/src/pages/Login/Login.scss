@@ -1,5 +1,45 @@
+@use "../../utils/utils.scss" as *;
+
 #login {
     margin: 5% 25%;
     box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
-    padding: 2rem;
+    padding: 3rem;
+    border-radius: 15px;
+    font-size: 1.25rem;
+    border-bottom: 3px solid $accent;
+
+    h2 {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #desologo {
+        height: 2rem;
+    }
+
+    #desc {
+        margin-top: 0;
+        opacity: 0.5;
+    }
+
+    form {
+        display: block;
+
+        label, .form {
+            display: flex;
+            flex-direction: column;
+        }
+        .form, textarea {
+            padding: 0.5rem;
+            border-radius: 5px;
+            font-size: 1.25rem;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            border: none;
+            background-color: #eee;
+            font-family: 'Inter', sans-serif;
+        }
+    }
 }

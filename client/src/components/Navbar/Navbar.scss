@@ -4,7 +4,7 @@
     background-color: darken(#fff, 5%);
     box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: 3px solid $accent;
     align-items: center;
 
@@ -18,6 +18,15 @@
         &:hover {
             background-color: $accent;
             color: white;
+        }
+    }
+
+    #loginbutton {
+        background-color: $accent;
+        color: white;
+
+        &:hover {
+            background-color: lighten($accent, 10%);
         }
     }
 }
