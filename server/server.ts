@@ -1,5 +1,9 @@
-const {Deso} = require("deso.js")
-const express = require('express')
+// const {Deso} = require("deso.js")
+// const express = require('express')
+
+import express from "express"
+import { Deso } from "deso.js/dist"
+import cors from "cors"
 const app = express()
 const deso = new Deso({})
 
@@ -10,6 +14,7 @@ interface ReqBody {
     pkey: string
 }
 
+app.use(cors({ origin: true, credentials: true}))
 app.get(`/api/profile`, async (req: express.Request, res: express.Response) => {
     
   const pkey = req.query.pkey as string;
@@ -20,4 +25,8 @@ app.get(`/api/profile`, async (req: express.Request, res: express.Response) => {
   });
 
   res.status(200).json(profile);
+})
+
+app.listen(5000, () => {
+  console.log(`Server is running on port: 5000`);
 })
