@@ -1,0 +1,22 @@
+@use "../../utils/utils.scss" as *;
+
+#nav {
+    background-color: darken(#fff, 5%);
+    box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid $accent;
+
+    a {
+        padding: 1.5rem 1.25rem;
+        font-size: 1.25rem;
+        text-decoration: none;
+        transition: 0.3s ease;
+        color: black;
+
+        &:hover {
+            background-color: $accent;
+            color: white;
+        }
+    }
+}
