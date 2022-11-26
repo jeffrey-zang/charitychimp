@@ -1,20 +1,12 @@
-import Navbar from './components/Navbar.tsx';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home/Home.tsx'
-import Browse from './pages/Browse/Browse.tsx'
-import Search from './pages/Search/Search.tsx'
-import Post from './pages/Post/Post.tsx'
+import {AppContextProvider} from "./AppContext"
+import Navbar from './components/Navbar/Navbar'
 
-export default function MyApp() {
+function App() {
   return (
-    <BrowserRouter>
+    <AppContextProvider>
       <Navbar/>
-      <Routes>
-        <Route exact path="/" element={<Home />}></Route>
-        <Route path="/browse" element={<Browse />}></Route>
-        <Route path="/search" element={<Search />}></Route>
-        <Route path="/post" element={<Post />}></Route>
-      </Routes>
-    </BrowserRouter>
+    </AppContextProvider>
   );
 }
+
+export default App;
