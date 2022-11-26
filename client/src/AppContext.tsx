@@ -1,10 +1,11 @@
 import React from "react";
 
-interface Charity {
+export interface Charity {
     name: string,
     tagline: string,
     goal: number,
-    thumbnailUrl: string,
+    current: number,
+    thumbnailUrl?: string,
 }
 
 interface User {
@@ -31,7 +32,10 @@ export const AppContext = React.createContext<Context>({
 })
 
 export const AppContextProvider: React.FC<{children: React.ReactNode|React.ReactNode[]}> = ({children}) => {
-    const [charities, setCharities] = React.useState<Charity[]>([])
+    const [charities, setCharities] = React.useState<Charity[]>([
+        {name: "Mummify Monkey Tank Fund", tagline: "We're preseving monkeys in tanks of buifluid for the future", goal: 50, current: 13},
+        {name: "World Wildlife Fund", tagline: "For 60 years, WWF has worked to help people and nature thrive.\nAs the world’s leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.", goal: 150000000, current: 131614720},
+    ])
     const addCharity = (charity: Charity) => {
         setCharities([...charities, charity])
     }

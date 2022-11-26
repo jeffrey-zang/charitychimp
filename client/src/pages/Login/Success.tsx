@@ -2,6 +2,7 @@ import React from 'react'
 import './Login.scss'
 import { AppContext } from "../../AppContext"
 import { Link } from 'react-router-dom'
+import { FaCheck } from 'react-icons/fa'
 
 const Success = () => {
 
@@ -10,8 +11,8 @@ const Success = () => {
   if (context.user) {
     return (
       <div id='success'>
-        <h2>Successfully logged into your Deso account</h2>
-        <p>Success! You're now logged in and can create posts about your favourite charities.</p>
+        <h2><FaCheck/> Successfully logged into your Deso account</h2>
+        <p>Success! You're now logged in and can create posts about your SADFASDFKASDJF;KADJS;KJ;LKDJSAfavourite charities.</p>
         <p>
           Username: <code>{context.user?.username}</code><br/>
           Description: <code>{context.user?.description}</code><br/>

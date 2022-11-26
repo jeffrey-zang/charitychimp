@@ -5,6 +5,9 @@
 }
 
 #browse {
+    h1 {
+        text-align: center;
+    }
     #searchbar {
         display: flex;
         justify-content: space-between;
@@ -23,28 +26,32 @@
     }
 }
 
-#posts {
+.post {
     border: 5px #8BACB1 solid;
     border-radius: 10px;
-    height: 14rem;
     box-shadow: 1px 1px 10px 2px rgba(175, 175, 175, 50%);
     width: 24%;
     margin: 2rem;
     margin-top: 1rem;
+    margin-right: 'none';
     background: white;
     text-align: left;
 
-    h1 {
+    h2 {
         font-size: 30px;
         font-weight:normal;
         margin: 1rem;
         color: #8BACB1;
     }
-    h2 {
+    p {
         font-size: 20px;
         font-weight:normal;
         margin: 1rem;
         color: black;
+    }
+    &:hover {
+        background-color: #fff;
+        transform: scale(1.03)
     }
 }
 
@@ -66,4 +73,3 @@
     margin: 1rem;
     justify-content: space-between;
 }
-

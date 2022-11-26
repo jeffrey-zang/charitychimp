@@ -30,10 +30,21 @@
             border: none;
             background-color: #eee;
             font-family: 'Inter', sans-serif;
+            resize: none;
         }
     }
 
-    button {
+    button[type="submit"] {
         margin-top: 0.5rem;
     }
+}
+
+.rti--container {
+    --rti-tag: #eeeeee !important;
+    margin-top: 0.5rem !important;
+
+}
+.rti--tag button {
+    margin: 0;
+    color: black;
 }
