@@ -1,6 +1,26 @@
+@use "./utils/utils.scss" as *;
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap');
 
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
 }
+
+button{
+	color: white;
+    background: #8BACB1;
+    border: 20px;
+    font-size: 1.25rem;
+    padding: 1rem 1.25rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+    &:hover {
+        background-color: lighten($accent, 10%);
+    }
+    &:active {
+        transform: scale(0.95);
+    }
+}
+

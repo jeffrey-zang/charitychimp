@@ -5,7 +5,7 @@ import { BsGithub } from 'react-icons/bs'
 
 const Navbar = () => {
 
-  const pages = ['Browse', 'Post', 'Search']
+  const pages = ['Browse', 'Post', 'Search', 'Login']
 
   return (
     <div id='nav'>

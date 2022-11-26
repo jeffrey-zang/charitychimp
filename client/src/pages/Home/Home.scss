@@ -1,0 +1,44 @@
+@use "../../utils/utils.scss" as *;
+
+main {
+    display: flex;
+    height: 92vh;
+
+    #wrapper {
+        width: 100%;
+        padding-top: 20%;
+        justify-content: center;
+    }
+}
+
+#title {
+	color: #8BACB1;
+	font-size: 75px;
+    width: 100%;
+    text-align: center;
+}
+
+#description{
+	color: black;
+	font-size: 20px;
+	text-align: center;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#homeimg {
+    height: 100%;
+}
+#logo {
+    width: 20%;
+    justify-self: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

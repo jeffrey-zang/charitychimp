@@ -21,13 +21,16 @@ const app = (0, express_1.default)();
 const deso = new dist_1.Deso({});
 const USER_PUBLIC_KEY = "BC1YLhp9Zf6Yykr7V14zxqeoLS1AbsvExpkgMdVVuT3TDniEhD8htJ1";
 app.use((0, cors_1.default)({ origin: true, credentials: true }));
-app.get(`/api/profile`, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const pkey = req.query.pkey;
+app.use(express_1.default.json());
+app.post(`/api/profile`, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(req.body);
+    const pkey = req.body.pkey;
     if (!pkey)
-        throw new Error("pkey required");
+        res.status(400).json({ message: "include pee key" });
     const profile = yield deso.getSingleProfile({
         publicKey: pkey,
     });
+    console.log("AAAAAAAAAAAAA");
     res.status(200).json(profile);
 }));
 app.listen(5000, () => {

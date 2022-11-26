@@ -15,14 +15,17 @@ interface ReqBody {
 }
 
 app.use(cors({ origin: true, credentials: true}))
-app.get(`/api/profile`, async (req: express.Request, res: express.Response) => {
-    
-  const pkey = req.query.pkey as string;
-  if (!pkey) throw new Error("pkey required");
+app.use(express.json())
+app.post(`/api/profile`, async (req: express.Request<{}, {}, ReqBody>, res: express.Response) => {
+
+  console.log(req.body)
+  const pkey = req.body.pkey as string;
+  if (!pkey) res.status(400).json({message: "include pee key"});
 
   const profile = await deso.getSingleProfile({
     publicKey: pkey,
   });
+  console.log("AAAAAAAAAAAAA")
 
   res.status(200).json(profile);
 })
