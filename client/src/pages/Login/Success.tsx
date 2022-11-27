@@ -23,6 +23,9 @@ const Success = () => {
         <Link to='/post' key='post'>Start posting</Link><br/>
         <Link to='/browse' key='browse'>Browse charities</Link>
         <h2 style={{marginTop: '2rem'}}>Your posts</h2>
+        {
+          
+        }
       </div>
     )  
   } else {
