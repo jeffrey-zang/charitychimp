@@ -13,13 +13,13 @@ Through the Deso blockchain, users will sign in using their Deso public key. The
 It's Thanksgiving! Bob wants to donate to a charity, but he doesn't know which one. So, he goes on **CharityChimp**. First he uses the tags `animal` and `environment` because he knows he wants to help them. Boom! The World Wildlife Fund is perfect. Afterwards, he wants to post about his local charity, the Humane Society. He creates a Deso account, logs in, and creates a post about it.
 
 ## 😩 Challenges we ran into
-We found it very challenging to deal with the Deso API. The one provided by MLH, `deso-protocol`, didn't work lol. We had to switch to a new, unfinished APi called `deso.js`. This created many conflicts in our work and forced us to restart many times. 
+We found it very challenging to deal with the Deso API. The one provided by MLH, `deso-protocol`, didn't work (lol). We had to switch to a new, unfinished API called `deso.js`. This created many conflicts in our work and forced us to restart many times. 
 
 ## 🙏 Why we help
 As hackers and tech enthusiasts, we wanted to find a way to give back to the world through programming and technology. We work to find solutions to problems through tech. Even if we can't donate to charities monetarily, we wanted to help them in a different way by using our programming skills. We believe that everyone deserves a Thanksgiving they can enjoy, and we hope that CharityChimp will help someone accomplish that.
 
 ## 💭 What's next for CharityChimp
-We hope to implement transactions through the Deso api, so that people can donate to charities using `$DESO` straight from our website. We want to add "more info" pop-ups for the charities, so you can get a better sense of their goals and ideas. Lastly, we hope that CharityChimp will be used around the world one day, making charities around the world feel more connected.
+We hope to implement transactions through the Deso API, so that people can donate to charities using `$DESO` straight from our website. We want to add "more info" pop-ups for the charities, so you can get a better sense of their goals and ideas. Lastly, we hope that CharityChimp will be used around the world one day, making charities around the world feel more connected.
 
 ## 👓 How it ACTUALLY works (for the nerds)
-When you click on CharityChimp, `React`, `React Icons`, `TypeScript`, and `SASS`  render a website. `React-router-dom` helps in browsing the pages. When you log in, we make an API request to the backend through `express.js`, `Node.js`, and `TypeScript`. Then, `deso.js` interacts with the Deso API and to return some user info, allowing you to log into your account. When you create a post, it gets added to our list of posts and gets indexed by the search engine.
+When you click on CharityChimp, `React`, `React Icons`, `TypeScript`, and `SASS` render a website using HTML, CSS, and Javascript. `React-router-dom` helps in browsing the pages. When you log in, we make an API request to the backend through `express.js`, `Node.js`, and `TypeScript`. Then, `deso.js` interacts with the Deso API and to return some user info, allowing you to log into your account. When you create a post, it gets added to our list of posts and gets indexed by the search engine.
