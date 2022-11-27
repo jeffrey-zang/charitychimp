@@ -1,14 +1,14 @@
-## 💡 Inspiration
+## 💡ඞInspirationඞ💡
+When we were donating to a charity, we found it confusing to search them
 
-## What it does
+## ❓ඞWhat it doesඞ❓
 
-## How we built it
+## 🔨ඞHow we built itඞ🔨
 
-## Challenges we ran into
+## 😱ඞChallenges we ran intoඞ😱
 
-## Accomplishments that we're proud of
+## 😎ඞAccomplishments that we're proud ofඞ😎
 
-## What we learned
+## 🧠ඞWhat we learnedඞ🧠
 
-## What's next for CharityChimp
-
+## ➡ඞWhat's next for CharityChimpඞ➡
