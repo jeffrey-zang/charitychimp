@@ -1,5 +1,6 @@
 import {AppContextProvider} from "./AppContext"
 import Navbar from './components/Navbar/Navbar'
+import Footer from './components/Footer/Footer'
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 import Home from './pages/Home/Home'
@@ -19,12 +20,12 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/browse" element={<Browse/>}/>
-        <Route path="/post" element={<Post/>}/>
-        <Route path="/postsuccess" element={<PostSuccess/>}/>
-        <Route path='/search' element={<Search/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/profile' element={<Success/>}/>
+        <Route path="/browse" element={<><Browse/><Footer/></>}/>
+        <Route path="/post" element={<><Post/><Footer/></>}/>
+        <Route path="/postsuccess" element={<><PostSuccess/><Footer/></>}/>
+        <Route path='/search' element={<><Search/><Footer/></>}/>
+        <Route path='/login' element={<><Login/><Footer/></>}/>
+        <Route path='/profile' element={<><Success/><Footer/></>}/>
       </Routes>
       </BrowserRouter>
     </AppContextProvider>

@@ -3,26 +3,28 @@ import './Home.scss'
 import homeImg from './Home.png'
 import logo from './logo.png'
 import { useNavigate } from 'react-router-dom'
+import Deso from '../Login/deso.webp'
 
 const Home = () => {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   return (
     <main>
       <img id='homeimg' src= {homeImg} />
       <div id='wrapper'>
         <img id='logo' src= {logo} />
         <div id = 'title'>CharityChimp</div>
-        <div id = 'description'>
+        <h3 className = 'description'>
           Helping you help others through charities
-        </div>
+        </h3>
         <div id='buttons'>
-          <button id = 'getStarted' onClick = {
+          <button className='primary-button' onClick = {
             () => {navigate('/post')}
           }>Get Started</button>
-          <button id = 'viewCharities' onClick = {
+          <button className='secondary-button' onClick = {
             () => {navigate('/browse')}
           }>View Charities</button>
         </div>
+        <h3 className = 'description'>Powered by <img id = 'homedeso' src={Deso}></img></h3>
       </div>
   	</main>
   )

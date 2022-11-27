@@ -36,7 +36,7 @@ const Login = () => {
         }
       )
 
-      navigate('/success');
+      navigate('/profile');
     }
   }
 

@@ -6,6 +6,8 @@ import { AppContext } from "../../AppContext"
 
 import { BsGithub } from 'react-icons/bs'
 
+import Deso from '../../pages/Login/deso.webp'
+
 const Navbar = () => {
 
   const pages = ['Browse', 'Post']
@@ -30,6 +32,7 @@ const Navbar = () => {
       <img className={context.user?.pfp ? "navpfp" : "hide"} src={context.user?.pfp} alt='pfp'></img>
       <Link key='Login' to={`/${context.user ? "profile" : "login"}`} id='loginbutton'>
         {amiloggedin}
+        <img src={Deso}></img>
       </Link>
       {/* <a href='https://github.com/jeffrey-zang/give-back-hacks' target='_blank' rel='noreferrer'><BsGithub/></a> */}
 

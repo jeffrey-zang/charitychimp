@@ -1,0 +1,40 @@
+@use "../../utils/utils.scss" as *;
+
+#footer {
+    margin-top: 5rem;
+    padding: 5% 10%;
+    background-color: lighten($accent, 10%);
+    color: white;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 3rem;
+
+    p, a {
+        font-size: 1.25rem;
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        line-height: 150%;
+    }
+
+    div {
+        width: 100%;
+        display: block;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        opacity: 0.8;
+    }
+
+    img {
+        height: 4rem;
+    }
+}
